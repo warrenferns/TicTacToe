@@ -2,8 +2,10 @@
 import getpass
 #createboard
 board = ["-","-","-","-","-","-","-","-","-",]
+#first player
 player = "X"
 game_on = True
+#No winner at the beginning
 winner = None
 print("Tic-Tac-Toe")
 
@@ -18,7 +20,7 @@ def display_board():
   print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
   print(" --- --- --- ")
   
-
+#method to play the game
 def play_game():
   display_board()
   
