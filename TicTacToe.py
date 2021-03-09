@@ -31,7 +31,7 @@ def play_game():
 
   if winner=="X" or winner=="O":
     print(f"Yipeeee!!! {winner} WON.")
-  elif winner==None:
+  elif not winner:
     print("Its a Tie") 
   
 #handleuser
