@@ -13,13 +13,10 @@ print("Tic-Tac-Toe")
 def display_board():
   #According to the numpad in the keyboard
   print(" --- --- --- ")
-  print("| " + board[6] + " | " + board[7] + " | " + board[8] + " |")
-  print(" --- --- --- ")
-  print("| " + board[3] + " | " + board[4] + " | " + board[5] + " |")
-  print(" --- --- --- ")
-  print("| " + board[0] + " | " + board[1] + " | " + board[2] + " |")
-  print(" --- --- --- ")
-  
+  for i in range(2, -1, -1):
+    print(f'| {board[(i*3)]} | {board[(i*3)+1]} | {board[(i*3)+2]} |')
+    print(" --- --- --- ")
+
 #method to play the game
 def play_game():
   display_board()
@@ -33,13 +30,13 @@ def play_game():
     flip_player()
 
   if winner=="X" or winner=="O":
-    print("Yipeeee!!!  " +winner+" WON.")
+    print(f"Yipeeee!!! {winner} WON.")
   elif winner==None:
     print("Its a Tie") 
   
 #handleuser
 def handle_turn(player):
-  print(player + "'s turn")
+  print(f"{player}'s turn")
   position = getpass.getpass("Choose the position: ")
   valid = False
 
