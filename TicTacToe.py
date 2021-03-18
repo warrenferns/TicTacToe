@@ -9,13 +9,7 @@ game_on = True
 winner = None
 print("Tic-Tac-Toe")
 
-#displayboard
-def display_board():
-  #According to the numpad in the keyboard
-  print(" --- --- --- ")
-  for i in range(2, -1, -1):
-    print(f'| {board[(i*3)]} | {board[(i*3)+1]} | {board[(i*3)+2]} |')
-    print(" --- --- --- ")
+display_board = lambda: print(' --- --- --- \n'.join([f'| {board[(i*3)]} | {board[(i*3)+1]} | {board[(i*3)+2]} |\n' for i in range(2, -1, -1)]))
 
 #method to play the game
 def play_game():
